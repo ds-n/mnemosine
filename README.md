@@ -11,7 +11,7 @@ In memory data structure store and message broker
   Menmosine on its own is simply a key/value store daemon and message broker. Applications will need clients, of which there should be ones readily available for your language of choice.
 
 
-## Usage
+## Use of the node js client
 ### Mnemosine store
 
 ```node
