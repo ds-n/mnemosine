@@ -26,9 +26,9 @@ In memory data structure store and message broker
   };
   store.put("key", JSON.stringify(person));
 ```
-```node
-### A node js client to get
 
+### A node js client to get
+```node
 let Mnemosine = require('./mnemosine');
 
 
