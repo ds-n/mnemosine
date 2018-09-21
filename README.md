@@ -1,5 +1,5 @@
 # mnemosine
-In memory data structure store and message broker
+In memory key - value store and message broker
 
 
 
