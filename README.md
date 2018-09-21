@@ -9,8 +9,12 @@ In memory data structure store and message broker
 
 ## Install a client
   Menmosine on its own is simply a key/value store daemon and message broker. Applications will need clients, of which there should be ones readily available for your language of choice.
-  
-```python
+
+
+## Usage
+
+### A node js client to store
+```node
   let Mnemosine = require('./mnemosine');
   let mnemosine = new Mnemosine();
 
@@ -21,4 +25,18 @@ In memory data structure store and message broker
     id: "123e4567-e89b-12d3-a456-426655440000"
   };
   store.put("key", JSON.stringify(person));
+```
+```node
+### A node js client to get
+
+let Mnemosine = require('./mnemosine');
+
+
+let mnemosine = new Mnemosine();
+
+
+
+mnemosine.get("key", function(data) {
+	console.log(data)
+});
 ```
