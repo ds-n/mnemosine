@@ -12,8 +12,8 @@ In memory data structure store and message broker
 
 
 ## Usage
+### Mnemosine store
 
-### A node js client to store
 ```node
   let Mnemosine = require('./mnemosine');
   let mnemosine = new Mnemosine();
@@ -27,7 +27,6 @@ In memory data structure store and message broker
   store.put("key", JSON.stringify(person));
 ```
 
-### A node js client to get
 ```node
 let Mnemosine = require('./mnemosine');
 
@@ -38,5 +37,33 @@ let mnemosine = new Mnemosine();
 
 mnemosine.get("key", function(data) {
 	console.log(data)
+});
+```
+
+### Mnemosine message broker
+
+```node
+let Mnemosine = require('./mnemosine');
+
+
+let producer = new Mnemosine();
+
+
+var person = {
+	name: "Jade",
+	age: 30,
+	email: "emai@example.com",
+	id: "123e4567-e89b-12d3-a456-426655440000"
+};
+producer.publish("queue_name", JSON.stringify(person));
+```
+
+```node
+let Mnemosine = require('./mnemosine');
+
+
+let subscriber = new Mnemosine();
+subscriber.subscribe(process.argv[2], function(data) {
+	console.log(data);
 });
 ```
