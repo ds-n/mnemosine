@@ -1,5 +1,5 @@
 # mnemosine
-In memory key - value store and message broker
+Simple in memory key - value store and Message Broker written in Python
 
 
 
