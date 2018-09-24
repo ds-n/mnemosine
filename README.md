@@ -24,7 +24,7 @@ Simple in memory key - value store and Message Broker written in Python
     age: 30,
     id: "123e4567-e89b-12d3-a456-426655440000"
   };
-  store.put("key", JSON.stringify(person));
+  mnemosine.put("key", JSON.stringify(person));
 ```
 
 ```node
